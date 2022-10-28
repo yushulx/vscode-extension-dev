@@ -112,6 +112,8 @@ function copyFolder(src, des) {
         files.forEach(file => {
             let srcFile = path.join(src, file);
             let desFile = path.join(des, file);
+            console.log(srcFile);
+            console.log(desFile);
             if (fs.statSync(srcFile).isDirectory()) {
                 fs.mkdirSync(desFile);
                 copyFolder(srcFile, desFile);
@@ -212,6 +214,9 @@ function activate(context) {
         }),
         vscode.commands.registerCommand('dwt.license', async () => {
             vscode.env.openExternal(vscode.Uri.parse('https://www.dynamsoft.com/customer/license/trialLicense?product=dwt'));
+        }),
+        vscode.commands.registerCommand('dwt.samples', async () => {
+            vscode.env.openExternal(vscode.Uri.parse('https://www.dynamsoft.com/web-twain/resources/code-gallery/'));
         }),
     ]);
 }

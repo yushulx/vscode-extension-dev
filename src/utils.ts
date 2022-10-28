@@ -12,6 +12,8 @@ export function copyFolder(src: string, des: string) {
 		files.forEach(file => {
 			let srcFile = path.join(src, file);
 			let desFile = path.join(des, file);
+			console.log(srcFile);
+			console.log(desFile);
 			if (fs.statSync(srcFile).isDirectory()) {
 				fs.mkdirSync(desFile);
 				copyFolder(srcFile, desFile);

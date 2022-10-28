@@ -1,27 +1,53 @@
-# QuickStart
+# Angular Scanner Camera Capture
+A quick start Angular sample demonstrating the [Dynamic Web TWAIN](https://www.dynamsoft.com/web-twain/overview/) APIs.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+## Development Environment
 
-## Development server
+```bash
+ng --version
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Angular CLI: 13.3.7
+Node: 16.13.1
+Package Manager: npm 8.1.2
+OS: win32 x64
 
-## Code scaffolding
+Angular: 13.3.10
+... animations, common, compiler, compiler-cli, core, forms
+... platform-browser, platform-browser-dynamic, router
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Package                         Version
+---------------------------------------------------------
+@angular-devkit/architect       0.1303.7
+@angular-devkit/build-angular   13.3.7
+@angular-devkit/core            13.3.7
+@angular-devkit/schematics      13.3.7
+@angular/cli                    13.3.7
+@schematics/angular             13.3.7
+ng-packagr                      13.3.1
+rxjs                            7.5.5
+typescript                      4.6.4
 
-## Build
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Usage
+1. Install the dependencies:
+    
+    ```bash
+    npm install
+    ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Apply for a [30-day free trial license](https://www.dynamsoft.com/customer/license/trialLicense?product=dwt) and update the license key in `dynamic-web-twain.service.ts` file:
+    
+    ```typescript
+    Dynamsoft.DWT.ProductKey = "LICENSE-KEY";
+    ```
+    
+3. Run the Angular application as follows:
+    
+    ```bash
+    ng serve
+    ```
 
-## Running end-to-end tests
+    ![Angular Dynamic Web TWAIN Sample](https://www.dynamsoft.com/codepool/img/2022/10/angular-web-twain-sample.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

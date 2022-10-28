@@ -24,6 +24,9 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.commands.registerCommand('dwt.license', async () => {
 			vscode.env.openExternal(vscode.Uri.parse('https://www.dynamsoft.com/customer/license/trialLicense?product=dwt'));
 		}),
+		vscode.commands.registerCommand('dwt.samples', async () => {
+			vscode.env.openExternal(vscode.Uri.parse('https://www.dynamsoft.com/web-twain/resources/code-gallery/'));
+		}),
 	]);
 }
 

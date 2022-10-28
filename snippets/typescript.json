@@ -1,0 +1,130 @@
+{
+    "import": {
+		"prefix": "dwt import",
+		"description": "Import Dynamic Web TWAIN",
+		"body": [
+			"import { WebTwain } from 'dwt/dist/types/WebTwain';",
+			"import Dynamsoft from 'dwt';"
+		]
+	},
+	"config": {
+		"prefix": "dwt config",
+		"description": "Configure license key and resource path",
+		"body": [
+			"Dynamsoft.DWT.ProductKey = '<LICENSE-KEY>';",
+            "Dynamsoft.DWT.ResourcesPath = '<RESOURCE-PATH>';"
+		]
+	},
+	"init": {
+		"prefix": "dwt init",
+		"description": "Initialize Dynamic Web TWAIN",
+		"body": [
+			"Dynamsoft.DWT.Containers = [{ ContainerId: <CONTAINER-ID>, Width: <WIDTH>, Height: <HEIGHT> }];",
+            "Dynamsoft.DWT.Load();",
+			"Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', () => { });"
+		]
+	},
+	"object": {
+		"prefix": "dwt object",
+		"description": "Get Dynamic Web TWAIN object",
+		"body": [
+			"let dwtObject = Dynamsoft.DWT.GetWebTwain(<CONTAINER-ID);"
+		]
+	},
+	"source list": {
+		"prefix": "dwt source list",
+		"description": "Get source list",
+		"body": [
+			"let sources = dwtObject.GetSourceNames();"
+		]
+	},
+	"acquire image": {
+		"prefix": "dwt acquire image",
+		"description": "Acquire image",
+		"body": [
+			"dwtObject.OpenSource();",
+			"dwtObject.AcquireImage({}, () => { if (dwtObject) dwtObject.CloseSource(); }, () => {});"
+		]
+	},
+	"load image": {
+		"prefix": "dwt load image",
+		"description": "Load image",
+		"body": [
+			"dwtObject.LoadImageEx('', Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL, () => {}, () => {});"
+		]
+	},
+	"save as jpeg": {
+		"prefix": "dwt save as jpeg",
+		"description": "Save asJPEG",
+		"body": [
+			"dwtObject.SaveAsJPEG(<FILE-NAME>, this.dwtObject.CurrentImageIndexInBuffer);"
+		]
+	},
+	"save as pdf": {
+		"prefix": "dwt save as pdf",
+		"description": "Save as PDF",
+		"body": [
+			"dwtObject.SaveAsJPEG(<FILE-NAME>, () => { }, () => { });"
+		]
+	},
+	"save as tiff": {
+		"prefix": "dwt save as tiff",
+		"description": "Save as TIFF",
+		"body": [
+			"dwtObject.SaveAsJPEG(<FILE-NAME>, () => { }, () => { });"
+		]
+	},
+	"show imag editor": {
+		"prefix": "dwt show image editor",
+		"description": "Show image editor",
+		"body": [
+			"imageEditor = dwtObject!.Viewer.createImageEditor({",
+			"element: <HTMLDivElement>document.getElementById(<CONTAINER-ID>),",
+			"width: 750,",
+			"height: 800,",
+			"buttons: {",
+			"  visibility: {",
+			"    close: false",
+			"  }",
+			"}",
+			"});",
+			"imageEditor.show();"
+		]
+	},
+	"remove select image": {
+		"prefix": "dwt remove selected image",
+		"description": "Remove selected image",
+		"body": [
+			"dwtObject.RemoveAllSelectedImages();"
+		]
+	},
+	"remove all images": {
+		"prefix": "dwt remove all images",
+		"description": "Remove all images",
+		"body": [
+			"dwtObject.RemoveAllImages();"
+		]
+	},
+	"flip image": {
+		"prefix": "dwt flip image",
+		"description": "Flip image",
+		"body": [
+			"dwtObject.Flip(this.dwtObject.CurrentImageIndexInBuffer);"
+		]
+	},
+	"mirror image": {
+		"prefix": "dwt mirror image",
+		"description": "Mirror image",
+		"body": [
+			"dwtObject.Mirror(this.dwtObject.CurrentImageIndexInBuffer);"
+		]
+	},
+	"rotate image": {
+		"prefix": "dwt rotate image ",
+		"description": "Rotate image",
+		"body": [
+			"dwtObject.RotateLeft(this.dwtObject.CurrentImageIndexInBuffer);",
+			"dwtObject.RotateRight(this.dwtObject.CurrentImageIndexInBuffer);"
+		]
+	}
+}

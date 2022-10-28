@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/quickstart'),
+      dir: require('path').join(__dirname, './coverage/angular-scanner-camera-capture'),
       subdir: '.',
       reporters: [
         { type: 'html' },

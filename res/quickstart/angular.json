@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "quickstart": {
+    "angular-scanner-camera-capture": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,14 +13,19 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/quickstart",
+            "outputPath": "dist/angular-scanner-camera-capture",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/dwt/dist",
+                "output": "assets/dynamic-web-twain"
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -32,8 +37,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2.5mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -64,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "quickstart:build:production"
+              "browserTarget": "angular-scanner-camera-capture:build:production"
             },
             "development": {
-              "browserTarget": "quickstart:build:development"
+              "browserTarget": "angular-scanner-camera-capture:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "quickstart:build"
+            "browserTarget": "angular-scanner-camera-capture:build"
           }
         },
         "test": {

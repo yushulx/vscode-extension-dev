@@ -17,18 +17,19 @@
     "onCommand:dwt.doc",
     "onCommand:dwt.demo",
     "onCommand:dwt.about",
-    "onCommand:dwt.license"
+    "onCommand:dwt.license",
+    "onCommand:dwt.samples"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "dwt.quickstart",
-        "title": "dwt: Create Sample Project"
+        "title": "dwt: Create Angular Project for Dynamic Web TWAIN"
       },
       {
         "command": "dwt.doc",
-        "title": "dwt: API Reference"
+        "title": "dwt: Online API Reference"
       },
       {
         "command": "dwt.demo",
@@ -41,14 +42,18 @@
       {
         "command": "dwt.license",
         "title": "dwt: Get a 30-day Free Trial License"
+      },
+      {
+        "command": "dwt.samples",
+        "title": "dwt: Get More Samples"
       }
     ],
     "snippets": [
-			{
-				"language": "typescript",
-				"path": "./snippets/typescript.json"
-			}
-		]
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript.json"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
@@ -62,21 +67,24 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.72.0",
     "@types/glob": "^8.0.0",
     "@types/mocha": "^10.0.0",
     "@types/node": "16.x",
+    "@types/vscode": "^1.72.0",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
     "@typescript-eslint/parser": "^5.38.1",
+    "@vscode/test-electron": "^2.1.5",
     "eslint": "^8.24.0",
     "glob": "^8.0.3",
     "mocha": "^10.0.0",
-    "typescript": "^4.8.4",
     "ts-loader": "^9.4.1",
+    "typescript": "^4.8.4",
     "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0",
-    "@vscode/test-electron": "^2.1.5"
+    "webpack-cli": "^4.10.0"
   },
   "author": "yushulx",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "unzip": "^0.1.11"
+  }
 }
