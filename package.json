@@ -2,7 +2,7 @@
   "name": "dwt-code-generator",
   "displayName": "Angular Snippets for Dynamic Web TWAIN",
   "description": "A collection of quickstart samples and Angular code snippets demonstrating the Dynamic Web TWAIN APIs ",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.72.0"
   },
