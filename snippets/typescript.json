@@ -42,8 +42,10 @@
 		"prefix": "dwt acquire image",
 		"description": "Acquire image",
 		"body": [
+			"dwtObject.SelectSource(() => {",
 			"dwtObject.OpenSource();",
-			"dwtObject.AcquireImage({}, () => { if (dwtObject) dwtObject.CloseSource(); }, () => {});"
+			"dwtObject.AcquireImage({}, () => { if (dwtObject) dwtObject.CloseSource(); }, () => {});",
+			"});"
 		]
 	},
 	"load image": {
