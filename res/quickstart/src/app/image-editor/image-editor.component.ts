@@ -152,7 +152,7 @@ export class ImageEditorComponent implements OnInit {
   }
 
   updatePageInfo() {
-    if (this.dwtObject) {
+    if (this.dwtObject && document.getElementById("DW_TotalImage") && document.getElementById("DW_CurrentImage")) {
       (<HTMLInputElement>document.getElementById("DW_TotalImage"))!.value = this.dwtObject.HowManyImagesInBuffer.toString();
       (<HTMLInputElement>document.getElementById("DW_CurrentImage"))!.value = (this.dwtObject.CurrentImageIndexInBuffer + 1).toString();
     }
