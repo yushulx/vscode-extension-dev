@@ -4,7 +4,7 @@ This extension contains TypeScript snippets and Angular project templates for [D
 ![TypeScript snippets for Dynamic Web TWAIN](https://www.dynamsoft.com/codepool/img/2022/10/dynamic-web-twain-typescript-snippet.gif)
 
 ## Dynamic Web TWAIN Version
-v17.3.1 
+v18.3.0
 
 ## Usage
 - Angular Project for Dynamic Web TWAIN.
@@ -13,6 +13,14 @@ v17.3.1
     
         ![vscode commands for Dynamic Web TWAIN](https://www.dynamsoft.com/codepool/img/2022/10/web-twain-vscode-command.png)
     2. Select **Create Angular Project for Dynamic Web TWAIN** to create a new Angular project.
+    3. Request a [30-day FREE trial license](https://www.dynamsoft.com/customer/license/trialLicense?product=dwt) and update the license key in `src/app/dynamic-web-twain.service.ts`
+        ```typescript
+        Dynamsoft.DWT.ProductKey = "LICENSE-KEY";
+        ```
+    4. Run the project.
+        ```bash
+        npm install && ng serve
+        ```
 
 - TypeScript Code Snippets.
 
