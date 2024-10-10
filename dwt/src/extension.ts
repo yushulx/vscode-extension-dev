@@ -22,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
 			vscode.env.openExternal(vscode.Uri.parse('https://www.dynamsoft.com/web-twain/overview/'));
 		}),
 		vscode.commands.registerCommand('dwt.license', async () => {
-			vscode.env.openExternal(vscode.Uri.parse('https://www.dynamsoft.com/customer/license/trialLicense?product=dwt'));
+			vscode.env.openExternal(vscode.Uri.parse('https://www.dynamsoft.com/customer/license/trialLicense/?product=dcv&package=cross-platform'));
 		}),
 		vscode.commands.registerCommand('dwt.samples', async () => {
 			vscode.env.openExternal(vscode.Uri.parse('https://www.dynamsoft.com/web-twain/resources/code-gallery/'));
@@ -31,4 +31,4 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 // This method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }

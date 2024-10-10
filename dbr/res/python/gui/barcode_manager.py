@@ -218,7 +218,7 @@ class BarcodeManager():
         return self._reader.output_settings_to_json_string()
 
     def set_license(self, key):
-         # Apply for a trial license: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr
+         # Apply for a trial license: https://www.dynamsoft.com/customer/license/trialLicense/?product=dcv&package=cross-platform
         return BarcodeReader.init_license(key)
         
     def decodeLatestFrame(self):

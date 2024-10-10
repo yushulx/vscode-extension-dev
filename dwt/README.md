@@ -13,7 +13,7 @@ v18.3.0
     
         ![vscode commands for Dynamic Web TWAIN](https://www.dynamsoft.com/codepool/img/2022/10/web-twain-vscode-command.png)
     2. Select **Create Angular Project for Dynamic Web TWAIN** to create a new Angular project.
-    3. Request a [30-day FREE trial license](https://www.dynamsoft.com/customer/license/trialLicense?product=dwt) and update the license key in `src/app/dynamic-web-twain.service.ts`
+    3. Request a [30-day FREE trial license](https://www.dynamsoft.com/customer/license/trialLicense/?product=dcv&package=cross-platform) and update the license key in `src/app/dynamic-web-twain.service.ts`
         ```typescript
         Dynamsoft.DWT.ProductKey = "LICENSE-KEY";
         ```

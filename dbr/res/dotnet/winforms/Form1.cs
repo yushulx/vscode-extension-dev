@@ -17,7 +17,7 @@ namespace Test
         {
             InitializeComponent();
             FormClosing += new FormClosingEventHandler(Form1_Closing);
-            BarcodeQRCodeReader.InitLicense("DLS2eyJoYW5kc2hha2VDb2RlIjoiMjAwMDAxLTE2NDk4Mjk3OTI2MzUiLCJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInNlc3Npb25QYXNzd29yZCI6IndTcGR6Vm05WDJrcEQ5YUoifQ=="); // Get a license key from https://www.dynamsoft.com/customer/license/trialLicense?product=dbr
+            BarcodeQRCodeReader.InitLicense("DLS2eyJoYW5kc2hha2VDb2RlIjoiMjAwMDAxLTE2NDk4Mjk3OTI2MzUiLCJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInNlc3Npb25QYXNzd29yZCI6IndTcGR6Vm05WDJrcEQ5YUoifQ=="); // Get a license key from https://www.dynamsoft.com/customer/license/trialLicense/?product=dcv&package=cross-platform
             reader = BarcodeQRCodeReader.Create();
             capture = new VideoCapture(0);
             isCapturing = false;
@@ -153,12 +153,14 @@ namespace Test
             {
                 StartScan();
             }
-            else {
+            else
+            {
                 StopScan();
             }
         }
 
-        private void StartScan() {
+        private void StartScan()
+        {
             button2.Text = "Stop";
             isCapturing = true;
             // Task.Run(() => {
@@ -177,14 +179,17 @@ namespace Test
             thread.Start();
         }
 
-        private void StopScan() {
+        private void StopScan()
+        {
             button2.Text = "Camera Scan";
             isCapturing = false;
             if (thread != null) thread.Join();
         }
 
-        private void FrameCallback() {
-            while (isCapturing) {
+        private void FrameCallback()
+        {
+            while (isCapturing)
+            {
                 Mat frame = new Mat();
                 capture.Read(frame);
                 // pictureBox1.Image = BitmapConverter.ToBitmap(frame);

@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DBRLicenseVerificationLis
         
         // Initialize license.
         // The license string here is a time-limited trial license. Note that network connection is required for this license to work.
-        // You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=installer&package=ios
+        // You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense/?product=dcv&package=cross-platform
         DynamsoftBarcodeReader.initLicense("DLS2eyJoYW5kc2hha2VDb2RlIjoiMjAwMDAxLTE2NDk4Mjk3OTI2MzUiLCJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInNlc3Npb25QYXNzd29yZCI6IndTcGR6Vm05WDJrcEQ5YUoifQ==", verificationDelegate: self)
         // Override point for customization after application launch.
         return true

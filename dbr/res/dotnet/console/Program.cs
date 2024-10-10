@@ -8,10 +8,11 @@ namespace Test
     class Program
     {
         static void Main(string[] args)
-        {            
-            BarcodeQRCodeReader.InitLicense("DLS2eyJoYW5kc2hha2VDb2RlIjoiMjAwMDAxLTE2NDk4Mjk3OTI2MzUiLCJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInNlc3Npb25QYXNzd29yZCI6IndTcGR6Vm05WDJrcEQ5YUoifQ=="); // Get a license key from https://www.dynamsoft.com/customer/license/trialLicense?product=dbr
+        {
+            BarcodeQRCodeReader.InitLicense("DLS2eyJoYW5kc2hha2VDb2RlIjoiMjAwMDAxLTE2NDk4Mjk3OTI2MzUiLCJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInNlc3Npb25QYXNzd29yZCI6IndTcGR6Vm05WDJrcEQ5YUoifQ=="); // Get a license key from https://www.dynamsoft.com/customer/license/trialLicense/?product=dcv&package=cross-platform
             BarcodeQRCodeReader? reader = null;
-            try {
+            try
+            {
                 reader = BarcodeQRCodeReader.Create();
                 Console.WriteLine("GetVersionInfo(): " + BarcodeQRCodeReader.GetVersionInfo());
 
@@ -20,14 +21,18 @@ namespace Test
 
                 Console.WriteLine("Please enter an image file: ");
                 string? filename = Console.ReadLine();
-                if (filename != null) {
+                if (filename != null)
+                {
                     Result[]? results = reader.DecodeFile(filename);
-                    if (results != null) {
-                        foreach (Result result in results) {
+                    if (results != null)
+                    {
+                        foreach (Result result in results)
+                        {
                             Console.WriteLine(result.Text);
                         }
                     }
-                    else {
+                    else
+                    {
                         Console.WriteLine("No barcode found.");
                     }
                 }
